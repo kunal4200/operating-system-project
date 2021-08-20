@@ -1,32 +1,44 @@
-# Prerequisites
-*.d
+//.pss()system call //
+int
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+pss()
+{
+struct proc *p;
 
-# Precompiled Headers
-*.gch
-*.pch
+sti():
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+acquire(&ptable.lock);
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+for(p-ptable.proc;p<&ptable.proc(NPROC];p++)
+{
+if (p->state==SLEEPING)
+}
+cprintf("%s\t%d WW SLEEPING \n",p->name,p->pid);
+}
+else if(p->state=RUNNING)
+{
+cprintf("%s\t\t%d Wit RUNNING In" p->name,p->pid);
+}
+else if(p->state==RUNNABLE)
+{
+cprintf("%s %d Wit RUNNABLE in p->name,p->pid);
+}
+}
+//else if(p->state==UNUSED)
+//{
+//cprintf("%s\t%d\t\t UMUSED \n" name.p->pid):
+//}
+else if(p->state-EMBRYO)
+{
+cprintf("%s\t%d W EMBRYO \n" p->name.p->pid);
+}
+else if (p-->state==ZOMBIE)
+{
+else if(p->state==ZOMBIE)
+}
+cprintf("%s \t\t%d\\t\tZOBIE \N",p->name,p->pid);
+}
+}
+release(&ptable.lock);
+return 23;
+}
